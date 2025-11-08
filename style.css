@@ -1,0 +1,78 @@
+/* --- 1. JAVASCRIPT HELPER CLASSES --- */
+/* (This is what your app.js file uses) */
+
+/* This class is added by JS to hide the section */
+.hidden {
+    display: none;
+}
+
+/* Error Message */
+.error {
+    color: #d93025; 
+    font-weight: bold;
+    text-align: center;
+}
+
+/* Payment Statuses */
+.paid {
+    color: #198754; 
+    font-weight: bold;
+}
+.pending {
+    color: #ffc107; 
+    font-weight: bold;
+}
+.late {
+    color: #dc3545; 
+    font-weight: bold;
+}
+
+
+/* --- 2. YOUR CUSTOM OVERRIDES --- */
+/* (This is how you make it "non-bootstrappy") */
+
+/* Example: Change the main button color */
+.btn-primary {
+    background-color: #0077B6; /* A custom purple */
+    border-color: #5a4bcf;
+}
+
+.btn-primary:hover {
+    background-color: #4a3abf; /* A darker purple */
+    border-color: #4a3abf;
+}
+
+/* Example: Change the body font */
+body {
+    font-family: 'Georgia', serif;
+    background-color: #CAF0F8; /* <-- CHANGE THIS LINE */
+    color: #333;
+    line-height: 1.6;
+    margin: 0;
+    padding: 20px;
+}
+
+/* --- 3. CUSTOM MOBILE OVERRIDES --- */
+
+/* This applies ONLY to screens 768px wide or smaller (phones) */
+@media (max-width: 768px) {
+    
+    body {
+        /* Remove the gray 'website' background on phones */
+        background-color: #CAF0F8; /* Use white like a native app */
+    }
+
+    /* Remove the 'card' look (shadows, borders, margins) on phones */
+    .card {
+        border: none;
+        border-radius: 0;
+        box-shadow: none;
+        margin-top: 0 !important; /* Overrides Bootstrap's 'mt-4' etc. */
+    }
+
+    /* Remove the 'container' padding on phones */
+    .container {
+        padding-left: 0;
+        padding-right: 0;
+    }
+}
